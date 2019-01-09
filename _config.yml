@@ -1,12 +1,16 @@
 # Site settings
-title: Dong Liang's CV 
+title: Mon CV 
 description: ddbullfrog's CV
-favicon: /assets/img/avatar.JPG
-baseurl: https://ddbullfrog.github.io/resumecard
-url: https://ddbullfrog.github.io/resumecard
+favicon: /assets/img/gp.jpeg
+baseurl: http://gregoire.pouget.free.fr/cv/
+url: http://gregoire.pouget.free.fr/cv/
 rss_url: /pages/atom.xml
-google_analytics: UA-63653234-1
 
+# Collections
+collections:
+  - experiences
+  - degrees
+  
 # Build settings
 markdown: kramdown
 
@@ -14,72 +18,39 @@ exclude: [vendor]
 
 # Author settings
 author:
-  name: Dong Liang
-  title: Java Developer
-  address: Auckland, New Zealand
-  email: dongg.liang#gmail.com
-  link: http://ddbullfrog.com
+  name: Grégoire Pouget
+  title: ONG, développement, information, numérique
+  address: Paris, France
+  email: gregoire [at] byl.fr
+  link: https://byl.fr
   weibo:
-  github: ddbullfrog
-  linkedin: ddbullfrog
-  twitter: ddbullfrog
-  gavatar: /resumecard/assets/img/avatar.JPG
-  stackoverflow:
-#  stackoverflow: 4582127
-  workHistory:
-    - work1:
-      company: XXX Ltd
-      location: Auckland, New Zealand
-      title: Java Developer
-      started: 2014
-      duration: (2014 - Present)
-      description: I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description.
-    - work2:
-      company: XXX Ltd
-      location: Shanghai, China
-      title: Java Developer
-      started: 2012
-      duration: (2012 - 2014)
-      description: I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description.
-    - work3:
-      company: XXX Ltd
-      location: Shanghai, China
-      title: Java Developer
-      started: 2009
-      duration: (2009 - 2012)
-      description: I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description.
-  educationHistory:
-    - education1:
-      organization: XXXXXX University
-      location: Shenyang, China
-      degree: Bachelor
-      major: Software Engineering
-      started: 2005
-      duration: (2005 - 2009)
-      description: I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description.
+  github: barbayellow
+  linkedin: gregoirepouget
+  twitter: barbayellow
+  gavatar: /resumecard/assets/img/gp.jpeg
   languages:
     - language1:
-      name: Chinese
-      proficiency: Native
+      name: Français
+      proficiency: Courant
     - language2:
       name: English
-      proficiency: Professional
+      proficiency: Courant
     - language3:
-      name: Japanese
-      proficiency: Limit
-  programmingSkills:
+      name: PHP
+      proficiency: Courant
+    - language4:
+      name: Python
+      proficiency: Profesionnel
+  skills:
     - skill1:
-      name: HTML
+      name: Gestion de projet
       percentage: 100%
     - skill2:
-      name: Bootstrap
+      name: Management
       percentage: 90%
     - skill3:
-      name: JavaScript
+      name: Plaidoyer
       percentage: 70%
     - skill4:
-      name: AngularJS
+      name: Formation animation
       percentage: 70%
-    - skill5:
-      name: Java/Java EE
-      percentage: 90%
