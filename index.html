@@ -5,96 +5,96 @@ layout: default
     <div class="row-fluid">
         <div class="col-md-8">
 
-              {% if site.experiences %}
-              <h3 class="title with-icon"><span class="glyphicon glyphicon-plane cat-title"></span>Expérience professionelle</h3>
-              <ul class="timeline">
-              {% assign sorted_experiences = site.experiences | sort: 'started' | reverse %}
-              {% for experience in sorted_experiences %}
-                  <li class="timeline-inverted">
-                      {% if experience.started %}
-                          <div class="timeline-badge info">{{ experience.started }}</div>
-                      {% endif %}
-                      <div class="timeline-panel grid-block">
-                          <div class="timeline-heading">
-                              {% if experience.name %}
-                                  <h4 class="timeline-title">{{ experience.name }} </h4>
-                              {% endif %}
-                              <p>
-                                  <small class="text-muted">
-                                      {% if experience.position %}
-                                          {{ experience.position }}
-                                      {% endif %}
-                                  </small>
-                              </p>
-                              <p>
-                                  <small class="text-muted">
-                                      {% if experience.duration %}
-                                          <i class="fa fa-calendar"></i> {{ experience.duration }} |
-                                      {% endif %}
-                                      {% if experience.location %}
-                                          <i class="fa fa-map-marker"></i>  {{ experience.location }}
-                                      {% endif %}
-                                  </small>
-                              </p>
-                          </div>
-                          <div class="timeline-body">
-                              {% if experience.content %}
-                                  <p>{{ experience.content | markdownify }}</p>
-                              {% endif %}
-                          </div>
-                      </div>
-                  </li>
-                {% endfor %}
-              </ul>
-            {% endif %}
-            				    
-            {% if site.degrees %}
-              <h3 class="title with-icon"><span class="fa fa-book cat-title"></span>Formation</h3>
-              <ul class="timeline">
-              {% assign sorted_degrees = site.degrees | sort: 'started' | reverse %}
-              {% for degree in sorted_degrees %}
+            {% if site.experiences %}
+            <h3 class="title with-icon"><span class="glyphicon glyphicon-plane cat-title"></span>Expérience professionelle</h3>
+            <ul class="timeline">
+            {% assign sorted_experiences = site.experiences | sort: 'started' | reverse %}
+            {% for experience in sorted_experiences %}
                 <li class="timeline-inverted">
-                  {% if degree.started %}
-                    <div class="timeline-badge info">{{ degree.started }}</div>
-                  {% endif %}
-                  <div class="timeline-panel grid-block">
-                      <div class="timeline-heading">
-                          {% if degree.organization %}
-                              <h4 class="timeline-title">
-                              	{% if degree.name %}
-                                      {{ degree.name }}
-                                  {% endif %}
-                                  {% if degree.major %}
-                                      - {{ degree.major }}
-                                  {% endif %}</h4>
-                          {% endif %}
-                          <p>
-                              <small class="text-muted">
-                                {{ degree.organization }}
-                              </small>
-                          </p>
-                          <p>
-                              <small class="text-muted">
-                                  {% if degree.duration %}
-                                      <i class="fa fa-calendar"></i> {{ degree.duration }} |
-                                  {% endif %}
-                                  {% if degree.location %}
-                                      <i class="fa fa-map-marker"></i>  {{ deree.location }}
-                                  {% endif %}
-                              </small>
-                          </p>
-                      </div>
-                      <div class="timeline-body">
-                          {% if degree.content %}
-                              <p>{{ degree.content | markdownify }}</p>
-                          {% endif %}
-                      </div>
-                  </div>                  
+                    {% if experience.started %}
+                        <div class="timeline-badge info">{{ experience.started }}</div>
+                    {% endif %}
+                    <div class="timeline-panel grid-block">
+                        <div class="timeline-heading">
+                            {% if experience.name %}
+                                <h4 class="timeline-title">{{ experience.name }} </h4>
+                            {% endif %}
+                            <p>
+                                <small class="text-muted">
+                                    {% if experience.position %}
+                                        {{ experience.position }}
+                                    {% endif %}
+                                </small>
+                            </p>
+                            <p>
+                                <small class="text-muted">
+                                    {% if experience.duration %}
+                                        <i class="fa fa-calendar"></i> {{ experience.duration }} |
+                                    {% endif %}
+                                    {% if experience.location %}
+                                        <i class="fa fa-map-marker"></i>  {{ experience.location }}
+                                    {% endif %}
+                                </small>
+                            </p>
+                        </div>
+                        <div class="timeline-body">
+                            {% if experience.content %}
+                                <p>{{ experience.content | markdownify }}</p>
+                            {% endif %}
+                        </div>
+                    </div>
                 </li>
-                {% endfor %}
-              </ul>
-              {% endif %}
-          </div>
+              {% endfor %}
+            </ul>
+          {% endif %}
+          				    
+          {% if site.degrees %}
+            <h3 class="title with-icon"><span class="fa fa-book cat-title"></span>Formation</h3>
+            <ul class="timeline">
+            {% assign sorted_degrees = site.degrees | sort: 'started' | reverse %}
+            {% for degree in sorted_degrees %}
+              <li class="timeline-inverted">
+                {% if degree.started %}
+                  <div class="timeline-badge info">{{ degree.started }}</div>
+                {% endif %}
+                <div class="timeline-panel grid-block">
+                    <div class="timeline-heading">
+                        {% if degree.organization %}
+                            <h4 class="timeline-title">
+                            	{% if degree.name %}
+                                    {{ degree.name }}
+                                {% endif %}
+                                {% if degree.major %}
+                                    - {{ degree.major }}
+                                {% endif %}</h4>
+                        {% endif %}
+                        <p>
+                            <small class="text-muted">
+                              {{ degree.organization }}
+                            </small>
+                        </p>
+                        <p>
+                            <small class="text-muted">
+                                {% if degree.duration %}
+                                    <i class="fa fa-calendar"></i> {{ degree.duration }} |
+                                {% endif %}
+                                {% if degree.location %}
+                                    <i class="fa fa-map-marker"></i>  {{ deree.location }}
+                                {% endif %}
+                            </small>
+                        </p>
+                    </div>
+                    <div class="timeline-body">
+                        {% if degree.content %}
+                            <p>{{ degree.content | markdownify }}</p>
+                        {% endif %}
+                    </div>
+                </div>                  
+              </li>
+              {% endfor %}
+            </ul>
+            {% endif %}
+        </div>
 
         <div class="col-md-4">
             {% if site.author.stackoverflow or site.author.skills %}
